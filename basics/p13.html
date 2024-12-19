@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            width: 100%;
+        }
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: contain;
+            background-color: #f0f0f0;
+        }
+        .card-content {
+            padding: 15px;
+        }
+        .card-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .card-description {
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <script>
+            document.write(`
+                <div class="card">
+                    <img src="https://cdn-icons-png.flaticon.com/128/7856/7856140.png" alt="FREE DEMO CLASSES">
+                    <div class="card-content">
+                        <h3 class="card-title">FREE DEMO CLASSES</h3>
+                        <p class="card-description">Before enrolling, a free DEMO lesson is provided.</p>
+                    </div>
+                </div>
+            `);
+        </script>
+
+        <script>
+            document.write(`
+                <div class="card">
+                    <img src="https://cdn-icons-png.flaticon.com/128/11231/11231532.png" alt="JOB ORIENTED COURSES">
+                    <div class="card-content">
+                        <h3 class="card-title">JOB ORIENTED COURSES</h3>
+                        <p class="card-description">Be Practical offers career-focused training with hand-picked job oriented courses in Bangalore.</p>
+                    </div>
+                </div>
+            `);
+        </script>
+
+        <script>
+            document.write(`
+                <div class="card">
+                    <img src="https://cdn-icons-png.flaticon.com/128/8911/8911434.png" alt="BACKUP CLASSES">
+                    <div class="card-content">
+                        <h3 class="card-title">BACKUP CLASSES</h3>
+                        <p class="card-description">Missed classes are covered by backup classes. Before enrolling, a free DEMO lesson is provided.</p>
+                    </div>
+                </div>
+            `);
+        </script>
+
+        <script>
+            document.write(`
+                <div class="card">
+                    <img src="https://cdn-icons-png.flaticon.com/128/7856/7856140.png" alt="FREE TECHNICAL SUPPORT">
+                    <div class="card-content">
+                        <h3 class="card-title">FREE TECHNICAL SUPPORT</h3>
+                        <p class="card-description">Connect to technical discussion boards for project help.</p>
+                    </div>
+                </div>
+            `);
+        </script>
+
+      
+        <script>
+            document.write(`
+                <div class="card">
+                    <img src="https://cdn-icons-png.flaticon.com/128/11231/11231532.png" alt="REAL TIME PROJECTS">
+                    <div class="card-content">
+                        <h3 class="card-title">REAL TIME PROJECTS</h3>
+                        <p class="card-description">Gain world-class exposure with our real-time projects.</p>
+                    </div>
+                </div>
+            `);
+        </script>
+
+        <script>
+            document.write(`
+                <div class="card">
+                    <img src="https://cdn-icons-png.flaticon.com/128/8911/8911434.png" alt="FREE HR SESSIONS">
+                    <div class="card-content">
+                        <h3 class="card-title">FREE HR SESSIONS</h3>
+                        <p class="card-description">Before you join, you receive a complimentary HR session.</p>
+                    </div>
+                </div>
+            `);
+        </script>
+
+      
+        <script>
+            document.write(`
+                <div class="card">
+                    <img src="https://cdn-icons-png.flaticon.com/128/8911/8911434.png" alt="EVALUATION PROCESS">
+                    <div class="card-content">
+                        <h3 class="card-title">EVALUATION PROCESS</h3>
+                        <p class="card-description">Our HR Team Provides you with Interview Tips.</p>
+                    </div>
+                </div>
+            `);
+        </script>
+
+        
+        <script>
+            document.write(`
+                <div class="card">
+                    <img src="https://cdn-icons-png.flaticon.com/128/8911/8911434.png" alt="INTERVIEW TIPS">
+                    <div class="card-content">
+                        <h3 class="card-title">INTERVIEW TIPS</h3>
+                        <p class="card-description">Dedicated HR to take care of interviews & Job.</p>
+                    </div>
+                </div>
+            `);
+        </script>
+    </div>
+
+</body>
+</html>

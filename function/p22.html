@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Default Function Example</title>
+</head>
+<body>
+    <center>
+        <h1>2. Display User's Name Function (No Parameter, No Return Value)</h1>
+        <p>Function called on button click to display a message</p>
+    </center>
+    <button onclick="DisplayUserName()">Display Name</button>
+
+    <script>
+        
+        function DisplayUserName(){
+            let name = prompt('Enter your name:');
+            document.write(`<h1>Hello, ${name}!</h1>`);
+        }
+
+        DisplayUserName();
+        DisplayUserName();
+    </script>
+</body>
+</html>

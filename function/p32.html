@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Without Parameter, with Return Value Example</title>
+</head>
+<body>
+    <center>
+        <h1>Current Date and Time Function (Without Parameter, with Return Value):</h1>
+    </center>
+
+    <script>
+        
+        function getCurrentDateTime(){
+            let currentDateTime = new Date(); 
+            document.write("<h1>Before return</h1>");
+            return currentDateTime; 
+            document.write("<h1>After return</h1>");
+        }
+
+        let currentDateTime = getCurrentDateTime();
+        document.write(`<h1>Current Date and Time is: ${currentDateTime}</h1>`);
+        
+        function getRandomNumber(){
+            let randomNumber = Math.floor(Math.random() * 100) + 1;
+            return randomNumber;
+        }
+
+        let randomNum = getRandomNumber();
+        document.write(`<h1>Random Number is: ${randomNum}</h1>`);
+    </script>
+</body>
+</html>

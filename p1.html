@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics in JS</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .conatiner{
+            padding: 4%;
+            min-height: 100vh;
+            background-color: aqua;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .conatiner .card{
+            width: 350px;
+            padding: 20px;
+            background-color: white;
+        }
+        .conatiner .card img{
+            width: 100%;
+            
+        }
+        .card button{
+            width: 100%;
+            padding: 10px 30px;
+            font-size: 1.1rem;
+            margin-top: 20px;
+            border: none;
+            background-color: violet;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    1+1
+    
+    <script>
+       let a=1, b=1;
+       let c = a+b;
+       console.log(1+3, c);
+
+       var hello = "HEllo JAvaScript";
+       console.log(hello);
+
+       document.write(hello);
+       document.write("<h1>hello</h1>");
+       document.write(`<h1>${hello}</h1>`);
+
+
+       document.write(`
+            <section class="container">
+                <div class="card">
+                    <img scr="https://tse2.mm.bing.net/th?id=OIP.gASMlPqsrIt_9q8Y76PZKgHaFj&pid=Api&P=0&h=180">
+                    <h2>Nature Image</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure dignissimos accusamus dolores reiciendis sapiente sunt, accusantium quos. Quia corporis officia laborum, repellendus qui, voluptas alias ratione ullam, dicta reiciendis laboriosam.</p>
+
+                    <button>Create Account</button>
+                </div>    
+            </section>
+       `)
+    </script>
+</body>
+</html>

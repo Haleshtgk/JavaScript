@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1> 4. With Parameter, With Return Value</h1>
+    </center>
+
+    <hr>
+
+    <script>
+        function TotalTwoNum(fn, sn){
+            let total = fn + sn;
+            return total;
+        }
+        console.log(TotalTwoNum(300,500));
+        console.log(TotalTwoNum(345300,323500));
+
+        
+        function FormateAccNo(accno){
+            let output = '';
+            for(i=0; i<accno.length-1; i++){
+                if(i<=1 || i>=accno.length-3){
+                    output += accno[i];
+                }else{
+                    output+='*';
+                }
+            }
+            return output.toUpperCase();
+        }
+
+        console.log(FormateAccNo('AC876543456789gyu9'));
+        console.log(FormateAccNo('345678987654'));
+
+        let input = prompt('Enter Your Number');
+
+        document.write(`<h1>${FormateAccNo(input)}</h1>`)
+    </script>
+</body>
+</html>

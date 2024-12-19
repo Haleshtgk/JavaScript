@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Without Parameter, with Return Value Example</title>
+</head>
+<body>
+    <center>
+        <h1>Square Function (Without Parameter, with Return Value):</h1>
+    </center>
+
+    <script>
+        
+        function squareNumber(){
+            let number = 5; 
+            let result = number * number;
+            document.write("<h1>Before return</h1>");
+            return result; 
+            document.write("<h1>After return</h1>");
+        }
+
+       
+        let squareResult = squareNumber();
+        document.write(`<h1>The square of the number is: ${squareResult}</h1>`);
+     
+        function getGreeting(){
+            let greeting = "Hello, World!";
+            return greeting;
+        }
+
+        let greetingMessage = getGreeting();
+        document.write(`<h1>${greetingMessage}</h1>`);
+    </script>
+</body>
+</html>

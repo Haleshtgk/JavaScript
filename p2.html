@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container{
+            padding: 4%;
+            display: grid;
+            
+        }
+        .container .card img{
+            width: 100%;
+        }
+        .container .card{
+            padding: 10px;
+            background-color: white;
+        }
+        .card button{
+            width: 100%;
+            padding: 10px 30px;
+            font-size: 1.1rem;
+            margin-top: 20px;
+            border: none;
+            background-color: violet;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        var card = `<div class="card">
+                    <h2>Nature Image</h2>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdvEvYGH8Vk5NhYoDZCoaXmNnA923dOPZaYg&s" alt=" img">
+
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure dignissimos accusamus dolores reiciendis sapiente sunt, accusantium quos. Quia corporis officia laborum, repellendus qui, voluptas alias ratione ullam, dicta reiciendis laboriosam.</p>
+
+                    <button>Create Account</button>
+                </div> 
+        `
+
+        document.write(`
+        <section class="conatiner">
+            ${card}
+            ${card}
+            ${card}
+            ${card}
+            ${card}
+            ${card}
+            ${card}
+            ${card}
+            ${card}
+            ${card}
+            ${card}
+            ${card}
+        <.section>
+        `)
+    </script>
+</body>
+</html>

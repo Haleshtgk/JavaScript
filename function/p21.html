@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Default Function Example</title>
+</head>
+<body>
+    <center>
+        <h1>1. Add Numbers Function (No Parameter, No Return Value)</h1>
+        <p>Function called on button click to add two numbers</p>
+    </center>
+    <button onclick="AddNumbers()">Add Numbers</button>
+
+    <script>
+        // Function to add two numbers and display the result
+        function AddNumbers(){
+            let num1 = Number(prompt('Enter the first number:'));
+            let num2 = Number(prompt('Enter the second number:'));
+            let result = num1 + num2;
+            document.write(`<h1>The total of the numbers is = ${result}</h1>`);
+        }
+
+        // Example of calling the function multiple times
+        AddNumbers();
+        AddNumbers();
+    </script>
+</body>
+</html>
