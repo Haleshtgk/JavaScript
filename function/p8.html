@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Function</h1>
+    </center>
+
+    <hr>
+    <h1>ECMA Script code</h1>
+
+    <script>
+        document.write(`<h1>Function Defining..!(Local Function)</h1>`);
+        function sum(a,b){
+            return a+b;
+        }
+
+        console.log(sum(10, 10));
+
+
+        document.write(`<h1>Function Expressions..!</h1>`);
+        let fullname = function(fn, sn){
+            return fn + " " + sn;
+        }
+
+        console.log(fullname('arun','kumar'));
+        
+        //ex:creating arrow funcation
+        // let sum = () => {}
+        document.write(`<h1> Arrow Function..!</h1>`);
+        let sumTwoNum = (fn, sn) =>{
+            alert(fn+sn);
+            return fn+sn;
+        }
+        sumTwoNum(10,100);
+        document.write(`<h1>sum of 2 num ${sumTwoNum(567,987)}</h1>`);
+
+    </script>
+</body>
+</html>

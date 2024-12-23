@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Call Function</h1>
+        <p>A Function callback is a function which is to be execute after function has finished execution</p>
+    </center>
+
+    <script>
+        document.write(`<h1>Ex-1</h1>`);
+        // function displayAlert(){
+        //     alert('This is the alert msg');
+        // }
+
+        //setinterval function or method
+
+        // setInterval(displayAlert, 2000);
+
+        document.write(`<h1>Ex-2</h1>`);
+        //named function
+        // setInterval(function printHelloWorld(){
+        // document.write(`<h1>Hello word....!</h1>`);
+        // }, 1000);
+
+        //Annonymous function
+        // let result = document.getElementById('result');
+        // let i=0;
+        // setInterval(function(){
+        //     i++;
+        //     result.innerText = i;
+        //     // document.write(`<h1>${i}</h1>`);
+        // },1000);
+
+        // setInterval(()=>{
+        //      document.write(`<h1>Arrow function is executing</h1>`)
+        // }, 1000);
+
+
+        function greeting(question, yes, no){
+            if(confirm(question) == true){
+                //if user click ok btn this will exe
+                console.log('user chickes ok');
+                //yes para is func so we need to call that para
+                yes();
+            }else{
+                console.log('user chickes cancel btn');
+                no();
+            }
+        }
+
+        // greeting('How r u?', function(){
+        //     alert('i am okay...!')
+        // },function(){
+        //     alert('i am not okay...!')
+        // });
+
+        function yesFunction(){
+            alert('i am okay...!');
+        }
+
+        function noFunction(){
+            alert('i am not okay...!');
+        }
+        
+        greeting('How r u?', yesFunction, noFunction);
+
+    </script>
+</body>
+</html>

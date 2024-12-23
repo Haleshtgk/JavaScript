@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>DataType Converstion</h1>
+    </center>
+
+    <h1>Converting to String DT</h1>
+
+    <script>
+        let number = 123;
+        console.log(number);
+        console.log('typeof = ', typeof(number));
+        
+
+        //converting to str
+
+        let str = String(number);
+        console.log(str);
+        console.log('typeof = ', typeof(str));
+
+        
+
+        //converting boolean to string
+
+        const isAdmin = true;
+        console.log("isAdmin value = ", isAdmin);
+        console.log('typeof = ', typeof(isAdmin));
+        
+
+        let output1 = String(isAdmin);
+        console.log("output1 value = ", output1);
+        console.log('typeof = ', typeof(output1));
+        
+        
+        //coverting floating values
+
+        let x = 123.321;
+        console.log("x value = ", x);
+        console.log('typeof = ', typeof(x));
+
+        let output2 = String(x);
+        console.log("output2 value = ", output2);
+        console.log('typeof = ', typeof(output2));
+        
+        console.log(String(123));
+        console.log(String(123+4));//String(127)--->"127"
+        console.log(typeof(String(true)));
+        console.log(String(false));
+        console.log(String(123e-1));//"12.3"
+        console.log(String(undefined)[0]);
+        console.log(String(undefined));
+        console.log(String(null)[3].toUpperCase());
+        
+        
+        
+        
+        
+        
+    </script>
+</body>
+</html>

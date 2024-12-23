@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="year" placeholder="enter a year to check leap year or not">
+    <p id="result"></p>
+    <button onclick="checkLeapyear()">Check</button>
+    
+
+
+    <script>
+        let year = document.getElementById('year');
+        let result = document.getElementById('result');
+
+
+        const checkLeapyear = () =>{
+           console.log( Number(year.value)%4);
+           console.log( Number(year.value)%100);
+           console.log( Number(year.value)%400);
+           
+            if( Number(year.value)%4 ==0 && Number(year.value)%100 !=0 || Number(year.value) % 400 == 0){
+                console.log('given year is a leap year');
+                
+                
+                
+            }else{
+                console.log('given year is not leap year');
+            }
+        }
+
+        let name = 'racecar'//racecar
+
+        // i=3;
+        let reversedWord = ''
+        for(let i=name.length-1; i>=0; i--){
+            console.log(name[i]);
+            reversedWord+= name[i]
+            
+        }
+       if(name == reversedWord){ //arun == nura
+        console.log('given name is polindrome');
+        
+       }else{
+        console.log('given name is not a polindorme');
+        
+       }
+        
+    </script>
+</body>
+</html>
