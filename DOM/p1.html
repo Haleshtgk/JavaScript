@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>DOM</h1>
+        <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content.</p>
+        </center>
+        <hr>
+        <section id="block">
+        I
+        </section>
+
+
+        <script>
+        let block = document.getElementById('block');//section
+        //inerting html code
+        block.innerHTML = ' <h1>Hello world..!</h1>';
+        //applying style for any element from program (js code)
+        block.style.backgroundColor = "#0c0c0c";
+        block.style.padding = '20px';
+        block.style.color = 'green';
+        block.style.border='3px solid red'
+        block.style.borderRadius = '100px'
+        block.style.textAlign = 'center'
+        block.style.fontFamily = "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+        </script>
+</body>
+</html>

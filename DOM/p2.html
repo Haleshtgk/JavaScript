@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #code1{
+            width: 300px;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-shadow: 0px 0px 10px #ccc;
+            margin: auto;
+            margin-top: 30px;
+        }
+        #code1 button{
+            width: 100%;
+            border: none;
+            background-color: #0c0c0c;
+            color: white;
+            padding: 10px;
+        }
+
+        #code2{
+            width: 200px;
+            margin: auto;
+            margin-top: 30px;
+            font-family: serif;
+            border-color: #0c0c0c;
+            color: #fff;
+            padding: 30px;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>innerHTML and innerText to add the content</h1>
+        <p>we can use .innerHTML to insert any html elements to inside any html elements and we can use innerText to insert the content into any html element</p>
+        </center>
+        <hr>
+        <div id="card1"></div>
+        <div id="card2"></div>
+        <h1 id="heading"></h1>
+        <p id="subtitle"></p>
+        <script>
+        let card1 = document.getElementById('card1');
+        let card2 = document.getElementById('card2');
+        let headingtag = document.getElementById('heading');
+        let pragraphTag = document.getElementById('subtitle');
+
+        //inserting html elements using .innerHTML
+        card1.innerHTML =`
+        <img src="https://www.shutterstock.com/image-photo/
+        calm-weather-on-sea-ocean-600nw-2212935531.jpg" alt="loading...">
+        <h4>This is the card heading</h4>
+        <p>this the content of the card</p>
+        <button>Know more</button>
+        `
+        card2.innerHTML = '<h1>This is the heading tag inside the card2 from js program</h1>';
+        //inserting text or content using .innetText
+        headingtag.innerText = 'This is the text from js program';
+        pragraphTag.innerText = 'we can use .innerHTML to insert any html elements to inside any html elements and we can use innerText to insert the content into any elements'
+        </script>
+</body>
+</html>

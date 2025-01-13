@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let value1 = Number("hello");
+        console.log(value1);
+
+        let value2 = 123;
+
+        console.log(isNaN(value1));
+        console.log(isNaN(value2));
+
+        console.log(isNaN(123));
+        console.log(isNaN("Hello"));
+        console.log(isNaN("123"));
+        console.log(isNaN("2024/12/23"));
+        console.log(isNaN("null"));
+        console.log(isNaN(null));
+        console.log(isNaN(0/0));
+        console.log(Number(0/0));
+        console.log(isNaN("123a4"));
+        console.log(Number("123a3"));
+        console.log(isNaN("1234e10"));
+        console.log(Number("2123e10"));
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>parseInt(), parseFloat(), fixedTo()</h1>
+    </center>
+
+    <script>
+        let x = "123.321";
+        let y = "12345.9876565";
+        let z = "apple";
+
+
+        console.log("ParseInt = ", parseInt(x));
+        console.log("ParseFloat = ", parseFloat(x));
+        console.log("Number = ", Number(x));
+
+        console.log("ParseInt = ", parseInt(y));
+        console.log("ParseFloat = ", parseFloat(y));
+        console.log("Number = ", Number(y));
+        
+        let decimalNumber = 1234.567897654;
+        document.write(`<h1>DecimalNum val = ${decimalNumber}</h1>`);
+        document.write(`<h1>DecimalNum .toFixed = ${decimalNumber.toFixed()}</h1>`);
+        console.log("Fixed to toFixed() ", decimalNumber.toFixed());
+        console.log("Fixed to toFixed(1) ", decimalNumber.toFixed(1));
+        console.log("Fixed to toFixed(2) ", decimalNumber.toFixed(2));
+        console.log("Fixed to toFixed(3) ", decimalNumber.toFixed(3));
+
+        
+        
+    </script>
+</body>
+</html>

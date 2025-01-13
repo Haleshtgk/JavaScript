@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Celebration</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #000428, #004e92);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .countdown-container {
+            text-align: center;
+        }
+        h1 {
+            font-size: 4rem;
+        }
+        .timer {
+            font-size: 3rem;
+            margin: 20px 0;
+        }
+        .celebration {
+            display: none;
+            font-size: 2rem;
+            animation: celebration 3s ease-in-out infinite;
+        }
+        @keyframes celebration {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+        .fireworks {
+            display: none;
+            width: 200px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <img src="https://img1.picmix.com/output/stamp/normal/2/0/7/9/1699702_3c8d5.gif" alt="Fireworks" class="fireworks" id="fireworks" style="background-image: url(https://img1.picmix.com/output/stamp/normal/2/0/7/9/1699702_3c8d5.gif) ;"> -->
+
+    <div class="countdown-container">
+        <h1>Countdown to Celebration</h1>
+        <div class="timer" id="timer">Loading...</div>
+        <div class="celebration" id="celebration">🎉 Happy New Year...! 🎉</div>
+    </div>
+    <script>
+        const targetDate = new Date(new Date().getTime() + 10000); 
+        const timerElement = document.getElementById('timer');
+        const celebrationElement = document.getElementById('celebration');
+        const fireworksElement = document.getElementById('fireworks');
+
+        function updateTimer() {
+            const now = new Date();
+            const diff = targetDate - now;
+
+            if (diff <= 0) {
+                clearInterval(timerInterval);
+                timerElement.style.display = 'none';
+                celebrationElement.style.display = 'block';
+                fireworksElement.style.display = 'block';
+            } else {
+                const seconds = Math.floor(diff / 1000);
+                timerElement.textContent = `${seconds}s remaining`;
+            }
+        }
+
+        const timerInterval = setInterval(updateTimer, 1000);
+        updateTimer();
+    </script>
+</body>
+</html>

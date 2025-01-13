@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>selecting elements using id attribute</h1>
+    </center>
+    <h1 id="marks">
+        <span>76</span>
+    </h1>
+    <p id="subtitle">This is the subtitle</p>
+    <script>
+    //select html elements and storing inside the variables
+    let marks = document.getElementById('marks');
+    let subtitle = document.getElementById('subtitle');
+    //after selecting we can use that tag inside the js
+    //getting that innerHTML and innerText
+    //setting new innerHTML or innerText
+    //we can get any attributes from this selected tag or element
+    //we can apply style to that selected elements
+    //and we can set new attribute and we can change attribute value
+    //and we can remove the classnames from selected tags
+    
+    //and we can set new class names or add new class names to selected html elements
+
+    console.log('inner html grom h1 tag that is marks id tag = ', marks.innerHTML);
+    console.log('inner text from selected sublitile p tag = ', subtitle.innerText);
+    
+    marks.innerHTML = '<p>This is the para inside the marks h1 tag</p>';//changing the innerhtml
+    console.log('inner htrml from h1 tag that is marks id tag = ', marks.innerHTML);
+
+    //innerText adding
+
+    subtitle.innerText = 'hello world..!';
+    console.log('inner text = ', subtitle.innerText);
+
+    console.log(marks.getAttribute('id'));
+    console.log(marks.id);
+    console.log(marks.getAttribute('title'));
+    console.log(marks.title);
+
+    console.log(subtitle.getAttribute('id'));
+    console.log(subtitle.id);
+    console.log(subtitle.getAttribute('title'));
+    console.log(subtitle.title);
+    
+    marks.style.color = 'red';
+    subtitle.style.color = '#fff';
+    subtitle.style.background = 'orange';
+    subtitle.style.padding = '20px';
+    subtitle.style.fontSize = '3rem';
+    subtitle.style.fontWeight = '800';
+
+
+
+    marks.setAttribute('class', 'testClass');
+    marks.setAttribute('style', "background-color:red");
+
+    marks.setAttribute('class', 'hello');
+    marks.setAttribute('title', 'hellll');
+    
+    
+    
+    
+    </script>
+</body>
+</html>

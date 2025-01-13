@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        }
+        .container1{
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #000000;
+        }
+        .container{
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        }
+        .container h1{
+        font-size: 10rem;
+        color: #fff;
+        }
+        h2{
+        font-size: 10rem;
+        color: #fff;
+        }
+        #number5{
+        transform: translateX(-80px) translateY(200px);
+        transition: 3s;
+        }
+        #number4{
+        transition: 3s;
+        }
+        .img1, .img2{
+        width: 300px;
+        display: none;
+        }
+    </style>
+</head>
+<body onclick="timeChecker()">
+        <audio src=""></audio>
+        <div class="container1">
+        <img src="https://img.clipart-library.com/2/clip-fireworks-animated-gif/clip-fireworks-animated-gif-31.
+        gif" alt="" class="img1">
+        <div class="container">
+        <h1>202</h1>
+        <h2 id="number4">4</h2>
+        <h2 id="number5">5</h2>
+        I
+        </div>
+        <img src="https://i.gifer.com/embedded/download/DzSL.gif" alt="" class="img2">
+        </div>
+        <script>
+        let number4 = document.getElementById('number4')
+        let number5 = document.getElementById('number5')
+        let img1 = document.querySelector('.img1');
+        let img2 = document.querySelector('.img2'); //selecting class
+        function timeChecker(){
+        let date = new Date();
+        if(date.getHours()==12 && date.getMinutes()==29){
+        number4.style.transform = 'translateY(-200px)';
+        number5.style.transform = 'translateX(-80px) translateY(0px)';
+        number4.style.color = 'yellow'
+        number5.style.color = 'yellow'
+        //displaying images
+        img1.style.display = 'block';
+        img2.style.display = 'block';
+        //to play bgm
+        const song = new Audio('./new_year_bgm.mp3');
+        song.play()
+        clearInterval(interval)
+        }
+        console.log(date.getHours(), date.getMinutes());
+        }
+        var interval = setInterval(timeChecker, 1000);// 1000ms = 15
+        </script>
+</body>
+</html>
