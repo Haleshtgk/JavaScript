@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        }
+        header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+        }
+        p{
+        line-height: 1.7;
+        font-size: 1.2rem;
+        padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        DOM
+    </center>
+    <div>
+    <button onclick="themeHanlder()" id="btn"></button> <i class="fa-solid fa-moon"></i></button>
+
+    </div>
+    <main>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati alias laudantium similique nobis quam voluptatibus quae optio aliquid delectus nam earum itaque ipsa illum, eius eum esse temporibus assumenda ducimus.
+        Perferendis fugiat cumque quis id ab vero dicta, tempora sunt qui, asperiores quos rem hic mollitia itaque nemo labore nihil saepe repellendus. Sapiente perferendis non mollitia iure incidunt, a officiis.
+        Voluptatibus perferendis officia vel natus provident velit saepe quidem in quasi hic officiis aut eos, beatae laborum ea impedit molestias labore error, quia aspernatur accusantium qui porro vitae debitis? Tempora.
+        Fugiat tempore commodi a, at reprehenderit sapiente ad eum iusto, molestias adipisci laborum ex sint laboriosam quisquam ullam. Adipisci corporis eum recusandae veniam facilis vero pariatur ab esse alias minima.
+        Ullam natus quas officia atque cum nemo repellendus odio porro cupiditate illo quaerat corrupti debitis voluptate eos, accusantium optio similique, vero nihil, ratione voluptatem quod ipsa. Amet, consectetur? Reprehenderit, dolorum?
+        Earum commodi magnam, fuga iure distinctio eos facere incidunt eaque quo eius aut voluptatum! Velit praesentium consequatur expedita omnis minus nostrum, consectetur quidem alias, tempora doloremque iure quaerat sequi ducimus?
+        Facere natus voluptates quas nemo iure, pariatur suscipit doloremque enim assumenda quidem eos! Non doloribus dolor tempore rem autem, nam inventore amet, aperiam ratione vitae saepe odio facere perferendis consequatur.
+        Velit, quam magnam minima inventore sequi eaque hic ullam iste earum illo minus laborum omnis ratione mollitia atque corporis culpa excepturi nostrum quo eos nesciunt rem! Repudiandae accusamus optio tenetur?
+        Ipsa autem quisquam fuga laborum cum dolore nesciunt, iure corporis earum at cumque voluptate qui deleniti eligendi alias neque quos est. Natus vel, vitae rem repudiandae obcaecati mollitia corrupti id.
+        Modi ipsam ab quod? Tenetur minima voluptates repellendus, quos dolorum provident? Quidem error, ipsam quis consequuntur ullam voluptatem eos inventore vitae distinctio deleniti est eligendi in maxime assumenda neque laborum!
+    </main>
+
+    <script>
+        let btn = document.getElementById('btn');
+        // function Light ThemeHandler(){
+        // document.body.style.backgroundColor = '#fff';
+        // document.body.style.color = '#θεθαθε'
+        // }
+        // function dark ThemeHandler(){
+        // document.body.style.backgroundColor = '#000';
+        // document.body.style.color = '#fff'
+        // }
+        let isLightTheme = false;
+        function themeHanlder() {
+        isLightTheme  = !isLightTheme;
+        console.log(isLightTheme);
+        if(isLightTheme == true) {
+        document.body.style.backgroundColor = '#0c0c0c';
+        document.body.style.color = '#fff';
+        btn.innerHTML = '<i class="fa-solid fa-sun"></i>'
+        }else{
+        document.body.style.backgroundColor = '#fff';
+        document.body.style.color = '#0c0c0c';
+        btn.innerHTML = '<i class="fa-solid fa-moon"></i>'
+        }
+        }
+        </script>
+</body>
+</html>
