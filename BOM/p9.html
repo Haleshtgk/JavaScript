@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>BOM - setTimeOut() to execute anytime in js after some time</h1>
+    </center>
+
+    <h1 id="result">Count 0</h1>
+
+    <script>
+        // function displayAlert(){
+        //     alert(`Hi`);
+        // }
+        // displayAlert();
+        // setTimeout(displayAlert, 5000);//it will wait untill 5s then start to execute
+
+
+        var result = document.getElementById('result');
+        var count = 0;
+        function incrementCount(){
+            count++;
+            console.log(count);
+            result.innerText = `Count ${count}`;
+            
+        }
+        // console.log(count);//0
+        // incrementCount();//0
+        // console.log(count);//1
+        // incrementCount();//1
+        // console.log(count);//2
+        // incrementCount();//2
+        
+        var intervalHandler;
+        function startInterval(){
+            intervalHandler = setInterval(incrementCount, 1000);
+        }
+
+        setTimeout(startInterval, 5000);
+    </script>
+</body>
+</html>
