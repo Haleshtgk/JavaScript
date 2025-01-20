@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Join() Method</h1>
+        <p>The join() return a new string by concatinating all of array elements in a array, seperated by commans or specified symbols</p>
+    </center>
+
+    <script>
+        let bikes = ['Yamaha', 'TVs', 'Honda', 'Bajaj'];
+        console.log(bikes);
+        document.write(`<h3>${bikes}</h3>`);
+
+
+        document.write(`<h3>toString() method the array bike = ${bikes.toString}</h3>`);
+
+        console.log(bikes.toString);
+
+        document.write(`<h3>join() method the array bike = ${bikes.join()}</h3>`);
+        document.write(`<h3>join() method the array bike = ${bikes.join(' and ')}</h3>`);
+        document.write(`<h3>join() method the array bike = ${bikes.join('@')}</h3>`);
+
+        
+    </script>
+</body>
+</html>

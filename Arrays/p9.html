@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>unShift()</h1>
+        <p>The unShift() method it is used to add the values to begining of the array and it will return a new update array length</p>
+    </center>
+
+    <hr>
+    <p>push() and unShift() are used add the elements to array and it return the new updated array length output</p>
+    <p>pop() and shift() will remove the elements from the array and give the updated output</p>
+
+    <script>
+        let bikes = ['Ducatte'];
+
+        console.log('bike values before()' , bikes );
+        
+        bikes.unshift("Royal Enfield");
+        console.log('bike values after()' , bikes );
+
+        //we can add the multiple value using unShift method
+        bikes.unshift("Honda", 'Tvs');
+        console.log('bike values after()' , bikes );
+        
+
+        console.log(bikes.unshift('Bajaj'));// when we try to print directly we get updated length of an array.//5
+        console.log('bike values after()' , bikes );
+        
+    </script>
+</body>
+</html>

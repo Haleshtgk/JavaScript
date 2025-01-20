@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>3) POP()</h1>
+        <p>The pop() removes the last elements of an array and it return the removed elements</p>
+    </center>
+
+    <hr>
+    <h1>Synatx for pop() method</h1>
+    <pre>
+        array.pop();
+    </pre>
+
+    <button onclick="removeElemts()">Remove an element</button>
+
+    <script>
+        var bikes = ['Yamaha', 'TVs', 'Honda', 'Bajaj'];
+        console.log('before pop length =', bikes.length);
+        console.log('before pop values = ', bikes);
+
+        //using pop()
+        bikes.pop();
+        console.log('after pop length =', bikes.length);
+        console.log('after pop values = ', bikes);
+
+        function removeElemts(){
+        console.log(bikes.pop());
+           
+            console.log('after pop length =', bikes.length);
+            console.log('after pop values = ', bikes);
+        }
+        
+    </script>
+</body>
+</html>

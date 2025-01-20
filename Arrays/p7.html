@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Push() metthod</h1>
+        <p>The push() method will insert a elements to end of the array. and return a array</p>
+    </center>
+    <hr>
+    <h1>Synatx for Push() method</h1>
+    <pre>
+        array.push("value")
+    </pre>
+    <hr>
+    <input type="text" name="Your name" id="name">
+    <button onclick="addAele()">Push</button>
+
+    <!-- result -->
+     <ul id="list"></ul>
+     <script>
+        let bikes = ['Bajaj'];
+         console.log('before push() length =', bikes.length);
+        console.log('before push() values = ', bikes);
+
+        bikes.push('TVs');
+         console.log('after push() length =', bikes.length);
+        console.log('after push() values = ', bikes);
+
+        bikes.push('Honda');
+         console.log('after push() length =', bikes.length);
+        console.log('after push() values = ', bikes);
+
+        bikes.push('Du', 'RE');
+         console.log('after push() length =', bikes.length);
+        console.log('after push() values = ', bikes);
+
+        // var nameInput = document.getElementById('name');
+        // var ulTag = document.getElementById('list');
+        // var allNames = [];
+        // console.log('before push() length =', allNames.length);
+        // console.log('before push() values = ', allNames);
+
+        // function addAele(){
+        //     ulTag.innerHTML = '';
+        // for(let index in allNames){
+        //     console.log(allNames[index]);
+        //     ulTag.innerHTML += `
+        //         <li>${allNames[index]}</li>
+        //     `
+            
+        // }
+        // }
+
+     </script>
+     
+</body>
+</html>
