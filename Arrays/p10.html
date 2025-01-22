@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Array method Part 2</h1>
+    </center>
+
+    <h1>7) Delete Method</h1>
+    <p>Array elements can be delete by using dele method in js</p>
+    <p>If we use the method del the array elements just it del that val but not place index val it will leaves undefined holes in the array</p>
+
+    p
+    <h3>Syntax</h3>
+    <pre>
+        delete array[index]
+    </pre>
+
+    <script>
+        let bikes = ['Yamaha','Royle Enfield', 'TVs', 'Honda', 'Bajaj'];
+        console.log('before del val', bikes);
+        console.log('before del length', bikes.length);
+
+
+        delete bikes[3];
+        console.log('after del val', bikes);
+        console.log('after del length', bikes.length);
+
+        delete bikes[0];
+        console.log('after del val', bikes);
+        console.log('after del length', bikes.length);
+
+        
+        console.log('index 0 = ', bikes[0]);
+        console.log('index 1 = ', bikes[1]);
+        console.log('index 2 = ', bikes[2]);
+        console.log('index 3 = ', bikes[3]);
+        console.log('index 4 = ', bikes[4]);
+        
+    </script>
+</body>
+</html>

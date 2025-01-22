@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>8) Concat()</h1>
+        <p>The cancat() joins 2 or more array. and then return a new array which contains both array</p>
+        <p>This method does not change the original array</p>
+    </center>
+
+    <hr>
+
+    <p>Syntax</p>
+    <pre>
+        array1.concat(array2, array3,................arrayX);
+    </pre>
+
+    <script>
+        let class1 = ['A', 'B', 'C', 'D'];
+        let class2 = ['E', 'F', 'G', 'H'];
+        let total = class1.concat(class2);
+
+        console.log('class1', class1);
+        console.log('class2', class2);
+        console.log('total', total);
+        
+        
+        
+
+        let array1 = [1,2,3,4,5];
+        let array2 = [6,7,8,9,10];
+        let array3 = [11,12,13,14,15];
+
+        let new_array = array1.concat(array2,array3);
+
+        console.log('array1', array1);
+        console.log('array2', array2);
+        console.log('array3', array3);
+        console.log('total', new_array);
+
+        console.log('Type of array2 = ', typeof new_array);
+        console.log("Checking that new array is array or not", Array.isArray(new_array));
+
+
+        let newArray2 = array1 + array2 + array3;
+        console.log("new array2 using + =", newArray2);
+        console.log('type of array2 = ', typeof newArray2);
+        
+        
+        
+        
+        
+    </script>
+</body>
+</html>

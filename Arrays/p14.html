@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>SORTING IN ASC AND DES ORDER BY USING COMPARISION FUNCTION</h1>
+    </center>
+
+    <script>
+        let numberArray1 = [89,96,56,98,45,5,99,100,654];
+        console.log('Before sorting the array', numberArray1);
+        
+        numberArray1.sort((currentItem, nextItem)=>{
+            return currentItem - nextItem;
+        });
+        console.log('After sorting in acs', numberArray1);
+        
+        let numberArray2 = [89,96,56,98,45,5,99,100,654];
+        console.log('Before sorting the array', numberArray2);
+        
+        numberArray2.sort((currentItem, nextItem)=>{
+            return nextItem - currentItem;
+        });
+        console.log('After sorting in acs', numberArray2);
+    </script>
+</body>
+</html>

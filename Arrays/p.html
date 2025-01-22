@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <center>
+        <h1>unShift()</h1>
+        <p>the unShift() method it is sued to add the value to begining of the array and it will returns a new Updated array length</p>
+    </center>
+
+    <hr>
+    
+    <p>Push and unShift() are used add the element to that array and it returns new updfated array length (Output)</p>
+    <p>pop and shift() are used remove the element to that arra and these method will returns removed element(output)</p>
+    
+
+    <input type="text" placeholder="Enter post title" id="title"> <br>
+    <input type="text" placeholder="Enter post URL" id="url"> <br>
+    <textarea name="" id="desc" cols="30" rows="10" placeholder="Post Description"></textarea>
+    <button onclick="uploadNewPost()">Upload</button>
+    <!-- <script>
+        let bikes = ['Ducatti'];
+        console.log('bikes value before unShift() = ', bikes);
+        
+        //adding a value  to the begining of the array using unShift() method
+        bikes.unshift('Royal Enfield'); //[Royal Enfield, 'Ducatti'];
+        console.log('After unShift() ', bikes);
+
+        //adding multiple value to begining of the array using same unShift()  method
+        bikes.unshift('Honda', 'Bajaj');//['Honda', 'Bajaj', 'Royal Enfiel'd, 'Ducatti']
+         console.log(bikes);
+
+         console.log(bikes.unshift('TVs'));
+         
+         console.log(bikes);
+         
+    </script> -->
+
+
+<script>
+   
+   var inputValue = document.getElementById('title')
+   var inputDesc = document.getElementById('desc')
+   var inputImage = document.getElementById('url');
+
+   var allPosts  = []
+   function uploadNewPost(){
+   
+    let newPost = {
+        title:inputValue.value,
+        desc:inputDesc.value,
+        imageUrl:inputImage.value
+    }
+
+    allPosts.unshift(newPost);
+    console.log(allPosts);
+    
+  for(let index in allPosts){
+    //destructuring object
+    //allpost[index] is the object hre we can destructur
+    // let {title, desc, imageUrl} = allPosts[index];
+
+    console.log(allPosts[index].title);
+    document.write(`<h1>${allPosts[index].title}</h1>`);
+    document.write(`<h1>${allPosts[index].desc}</h1>`);
+    document.write(`<img src=${allPosts[index].imageUrl} width="200">`);
+  }
+   }
+
+</script>
+    
+</body>
+</html>
