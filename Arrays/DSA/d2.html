@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array = [
+            [1, 2, 3, 5], // index 0
+            [10, 67, 45, 90], // index 1
+            [12, 45], // index 2
+            [100, 200, 300], // index 3
+            [10, 30] // index 4
+        ];
+
+        let addedArray = [];
+        let totatResult = 0;
+
+        for (let i = 0; i < array.length; i++) {
+            let innerArray = array[i];
+            let innerSum = 0;
+
+            for (let j = 0; j < innerArray.length; j++) {
+                innerSum += innerArray[j];
+            }
+
+            addedArray.push(innerSum);
+        }
+
+       
+        for (let k = 0; k < addedArray.length; k++) {
+            totatResult += addedArray[k];
+        }
+
+        console.log("AddedArrays:", addedArray);
+        console.log("Total Result:", totatResult);
+    </script>
+</body>
+</html>
