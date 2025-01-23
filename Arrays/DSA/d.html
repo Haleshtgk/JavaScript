@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Array Manipulation</title>
+</head>
+<body>
+    <form id="arrayForm" onsubmit="return false;">
+        <input type="number" id="inputValue" placeholder="Enter a number">
+        <button type="button" id="push" onclick="pushElement()">Push</button>
+        <button type="button" id="pop" onclick="popElement()">Pop</button>
+        <button type="button" id="display" onclick="displayArray()">Display</button>
+        <button type="button" id="clear" onclick="clearArray()">Clear</button>
+    </form>
+    <div id="output"></div>
+
+    <script>
+        
+        let array = [];
+
+       
+        function pushElement() {
+            const inputElement = document.getElementById("inputValue");
+            const value = parseInt(inputElement.value);
+
+            if (!isNaN(value)) {
+                array.push(value);
+                document.getElementById("output").innerText = `Element ${value} pushed to the array.`;
+            } else {
+                document.getElementById("output").innerText = "Please enter a valid number.";
+            }
+            inputElement.value = ""; // Clear the input field
+        }
+
+        // Function to remove the last element from the array
+        function popElement() {
+            if (array.length > 0) {
+                const poppedValue = array.pop();
+                document.getElementById("output").innerText = `Element ${poppedValue} popped from the array.`;
+            } else {
+                document.getElementById("output").innerText = "The array is empty. Nothing to pop.";
+            }
+        }
+
+        // Function to display the current state of the array
+        function displayArray() {
+            if (array.length > 0) {
+                document.getElementById("output").innerText = `Current Array: [${array.join(", ")}]`;
+            } else {
+                document.getElementById("output").innerText = "The array is empty.";
+            }
+        }
+
+        // Function to clear the array
+        function clearArray() {
+            array = [];
+            document.getElementById("output").innerText = "Array cleared.";
+        }
+    </script>
+</body>
+</html>
