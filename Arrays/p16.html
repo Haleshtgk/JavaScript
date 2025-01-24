@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>11) Slice</h1>
+        <p>The slice() method cuts the piece from the array, and its creates a new array</p>
+        <p><mark><b>Note:</b> The slice method will wont changes the original array</mark></p>
+    </center>
+    <hr>
+    <p><b>Synatx:</b></p>
+    <pre>
+        array.slice(starting index, ending index);
+    </pre>
+    <script>
+        let numbers = [1,2,3,4,5,6,7,8,9];
+        console.log('before slice the array :', numbers);
+
+        //to apply a slice method we need to use 
+        let cuttedArray = numbers.slice(2,6);
+        console.log('the original array = ', numbers);
+        console.log('New Array(Sliced) = ', cuttedArray);
+        
+        
+        
+    </script>
+</body>
+</html>
