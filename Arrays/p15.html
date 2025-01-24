@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>splice()</h1>
+        <p>This splice method is used to remove the elements from one index to next one and it can used to insert the elements to an array in perticular index position</p>
+    </center>
+
+    <p>Syntax</p>
+    <pre>
+        array.splice(starting index, how many need to remove);
+    </pre>
+
+    <p>Syntax</p>
+    <pre>
+        array.splice(index, deleting, values1, values2....);
+    </pre>
+
+    <p><mark><b>Note:</b> splice method can change the original array</mark></p>
+
+    <script>
+        let colors = ['red', 'pink', 'blue', 'yellow', 'darkgreen', 'white', 'gold','orange'];
+        console.log('before removing using splice method', colors);
+        //to del
+        colors.splice(1,4);
+
+        console.log('after removing the colors', colors);
+
+        let numbers = [10, 20, 30, 50]; //[10,1,2,3,4,5,20,30,50];
+        console.log('before the insert a vlues to an array using splice method = ', numbers);
+
+        //inserting 1,2,3,4,5 values instead of index 1
+        numbers.splice(1,0,1,2,3,4,5);//(index, deleting elements is 0 and value to insert);
+        console.log('after insert the array become = ', numbers);
+
+        //output: [10,1,2,3,4,5,20,30,50];
+        numbers.splice(6,0,"green","blue","yellow");
+        
+        //output: [10,1,2,3,4,"green","blue","yellow",5,20,30,50];
+        
+        console.log("after insert = ", numbers);
+        
+        
+    </script>
+</body>
+</html>
