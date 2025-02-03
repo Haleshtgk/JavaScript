@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlight Entered Element</title>
+</head>
+<body>
+    <script>
+        let userInput = prompt('Enter the element').toLowerCase(); 
+        let array = ['apple', 'banana', 'apple', 'mango', 'orange'];
+
+        document.write("<h3>The array elements are:</h3>");
+        
+        let found = false; 
+        for (let i = 0; i < array.length; i++) {
+            if (userInput === array[i].toLowerCase()) {
+                document.write(`<span style="color:red; font-weight:bold;">${array[i]}</span>, `);
+                found = true;
+            } else {
+                document.write(`${array[i]}, `);
+            }
+        }
+
+        if (!found) {
+            document.write("<br><br><span style='color:blue;'>Element not found!</span>");
+        }
+    </script>
+</body>
+</html>

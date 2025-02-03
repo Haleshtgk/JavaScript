@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h2>21) some();</h2>
+        <p>The some() method tests whether at least one element in the array passes the test implemented by the provided function.</p>
+        <p>It returns a true Value if, in the array, it founds an element for which the provided function returns true; otherwise it returns false. It does not modifies the array.</p>
+    </center>
+    <hr>
+
+    <p><b>SYNATX :</b></p>
+    <pre>
+        array.some((element)=>{});
+    </pre>
+    <hr>
+
+    <script>
+        let array = [10,20,40,35,67,101];
+        console.log(array.some((item)=>item>100));
+        
+    </script>
+</body>
+</html>
