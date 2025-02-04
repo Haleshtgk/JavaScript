@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+     center>
+    <hr>
+   <h1>ARRAY METHODS PART - 5</h1>
+    </
+    <center>
+        <h2>25) forEach();</h2>
+        <p>The forEach() mthods executes a provided function once for each array elements, and this method is not executed for empty elements.</p>
+        
+    </center>
+    <hr>
+
+    <p><b>SYNATX :</b></p>
+    <pre>
+        array.forEach(function(parameter){ });
+    </pre>
+    <hr>
+
+    <script>
+       let fruits = ['Banana', 'Orange', 'Apple', "Mango", 'kiwi', 'example'];
+
+        // for(let i=0; i<fruits.length; i++){
+        //     console.log(fruits[i]);
+            
+        // }
+
+        fruits.forEach(function(item){
+            console.log(item);
+            
+        })
+
+        var numbers = [23, 45, 67, 43, 67, 12, 100, 90, 45, 567];
+        var result = [];
+
+        numbers.forEach(function(item){
+            if(item<=100){
+                result.push(item)
+            }
+        })
+        console.log(result);
+
+        let evenNumbers = [];
+        let oddNumbers = [];
+        var evencount = 0;
+        var oddcount = 0;
+        numbers.forEach(function(item){
+            if(item%2==0){
+                evencount++;
+                evenNumbers.push(item)
+            }else{
+                oddcount++;
+                oddNumbers.push(item)
+            }
+        })
+
+        console.log('even numbers = ', evenNumbers);
+        console.log('odd numbers = ', oddNumbers);
+        
+        console.log('number of times even repeated = ', evencount);
+        console.log('number of times odd repeated = ', oddcount);
+        
+        
+    </script>
+</body>
+</html>

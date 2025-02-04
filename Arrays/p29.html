@@ -6,11 +6,23 @@
     <title>Document</title>
 </head>
 <body>
+    <center>
+        <h2>24) valueOf();</h2>
+        <p>The valueOf() method returns the array itself, and this method does not change the original array.</p>
+        <p>fruits.valueOf() returns the same as fruits</p>
+    </center>
+    <hr>
+
+    <p><b>SYNATX :</b></p>
+    <pre>
+        array.valueOf();
+    </pre>
+    <hr>
     <script>
         let fruits = ['Banana', 'Orange', 'Apple', 'Mango', 'kiwi', 'example'];
         console.log("Before the valueOf Method =",fruits);
         console.log("after the valueOf Method =", fruits.valueOf());
-        document.write(`<h1>${fruits.valueOf()}</h1>`);
+        document.write(`<h1>${fruits.valueOf()} </h1>`);
         
     </script>
 </body>
