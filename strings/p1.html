@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>String</h1>
+        <p>string is also a collection of data</p>
+    </center>
+    <hr>
+    <h1>String we can create in 3 ways</h1>
+    <ol>
+        <li>Literal String</li>
+        <li>Creating string using constructor method</li>
+        <li>Creating string using constructor with parameter</li>
+    </ol>
+    <hr>
+    <h1>Example: Creating string with string Literal</h1>
+
+    <script>
+
+        let string1 = 'Welcome to String Methods';
+
+        document.write(`<h1>SWtring1 variable values = ${string1}</h1>`);
+        document.write(`<h1>SWtring1 variable datatype = ${typeof(string1)}</h1>`);
+        document.write(`<h1>SWtring1 variable length = ${(string1.length)}</h1>`);
+
+        document.write(`<h1>SWtring1 variable 0 values = ${string1[0]}</h1>`);
+        document.write(`<h1>SWtring1 variable 1 values = ${string1[1]}</h1>`);
+        document.write(`<h1>SWtring1 variable 2 values = ${string1[2]}</h1>`);
+        document.write(`<h1>SWtring1 variable 3 values = ${string1[3]}</h1>`);
+        document.write(`<h1>SWtring1 variable 4 values = ${string1[4]}</h1>`);
+
+        document.write(`<h1>String1 variable last index values = ${string1[string1.length-1]}</h1>`);
+
+
+        for(let i = 0; i<string1.length; i++){
+            document.write(`<h1 style="color:green">index = ${i} and value = ${string1[i]}</h1>`)
+        }
+    </script>
+</body>
+</html>

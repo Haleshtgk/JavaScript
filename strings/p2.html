@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>STRING</h1>
+    </center>
+    <hr>
+    <h1>Example: By creating string using string object or string constructor directly using new keyword</h1>
+
+    <hr>
+    <script>
+        let string2 = new String('hi');
+        console.log('String2 var values = ', string2);
+        document.write(`<h1>String2 values = ${string2}</h1>`);
+        document.write(`<h1>String2 values datatype = ${typeof(string2)}</h1>`);
+        document.write(`<h1>String2 values length = ${string2.length}</h1>`);
+        
+        //adding val to string2  string objext var
+        //in string there are n o index val
+        //we can add a val to any index position using string2[index] = val
+
+
+        string2[0] = 'H';
+        string2[1] = 'E';
+        string2[2] = 'L';
+        string2[3] = 'L';
+        string2[4] = 'O';
+
+        document.write(`<h1>String2 index 0 = ${string2[0]} </h1>`);
+        document.write(`<h1>String2 index 1 = ${string2[1]} </h1>`);
+        document.write(`<h1>String2 index 2 = ${string2[2]} </h1>`);
+        document.write(`<h1>String2 index 3 = ${string2[3]} </h1>`);
+        document.write(`<h1>String2 index 4 = ${string2[4]} </h1>`);
+        document.write(`<h1>String2 index 4 = ${string2} </h1>`);
+
+        for(let i=0; i<string2.length;i++){
+            document.write(`<h1>${string2}</h1>`)
+        }
+    </script>
+
+</body>
+</html>
