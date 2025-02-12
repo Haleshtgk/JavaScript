@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>custom constructor</h1>
+    </center>
+    <hr>
+    <script>
+        function User(){
+            this.fn = "arun";
+            this.ln = "kumar";
+            this.email = "arun@gmail.com";
+            this.fullname = function(){
+                return this.fn + " " + this.ln;
+            }
+            this.marks = [98,89,78,98];
+            this.address = {
+                city:'Bengaluru',
+                DoorNo:56,
+                pincode:566098
+            }
+        }
+
+        var user1 = new User();
+        console.log("user1 = ", user1);
+        var user2 = new User();
+        console.log("user2 = ", user2);
+        
+    </script>
+</body>
+</html>
