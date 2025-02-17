@@ -11,7 +11,7 @@
        <div class="row">
         <div class="col-md-6 m-auto">
             <div class="card p-3">
-                <form action="">
+                <form action="" onsubmit="sub()">
                   <div class="row">
                     <div class="col-md-6">
                         <div class="form-group mt-3">
@@ -111,25 +111,35 @@
                         <label class="form-label" for="">Gender</label>
                         <div class="d-flex gap-3">
                             <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="gender">
                             <label class="form-check-label" for="flexRadioDefault1">Male</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="gender">
                             <label class="form-check-label" for="flexRadioDefault1">Female</label>
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                            <label class="form-check-label" for="flexRadioDefault1">Other</label>
                         </div>
-                        </div>
+                        <div class="genderError"></div>
                     </div>
                     </div>
+                    <button type="button" class="btn btn-primary">Cerate Account</button>
                   </div>
+                  
                 </form>
             </div>
         </div>
        </div>
-    </section>    
+    </section>  
+    <script>
+        function Sub(){
+            let gender = document.getElementById('gender');
+        let genderError = document.querySelector('.genderError');
+        if(gender==0){
+            genderError.innerHTML = `<span style='color:red'>Plz select the gender</span>`;
+        }else{
+            genderError.innerHTML = `<span style='color:red'>Gender Selected</span>`;
+        }
+        }
+    </script>  
 </body>
 </html>
