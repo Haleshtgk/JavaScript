@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: radial-gradient(#90d6af, #0c0c0c);
+        }
+        .calci{
+            width: 330px;
+            padding: 20px;
+            background-color: #2a2a2a;
+            border-radius: 10px;
+            padding-top: 40px;
+        }
+        .btns{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3px;
+            margin-top: 10px;
+        }
+        .calci input{
+            width: 100%;
+            padding: 8px;
+            background-color: #5acca8;
+            border: none;
+            font-size: 2rem;
+            font-weight: 700;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: #252525;
+            box-shadow: inset 1px 2px 10px rgb(0, 218, 134), 0px 2px 3px #0c0c0c;
+            border-radius: 4px;
+        }
+        .btns button{
+            padding: 10px;
+            font-size: 1.5rem;
+            background-color: #7b7b7b58;
+            border: none;
+            color: #fff;
+            border-radius: 4px;
+            box-shadow: 1px 2px 3px #000, inset 1px 1px 3px #0c0c0c;
+            cursor: pointer;
+        }
+        .btns button:active{
+            box-shadow: 0px 0px 0px #000, inset 4px 4px 8px #0c0c0c;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="calci">
+            <input type="text" value="" id="input">
+            <div class="btns">
+                <button onclick="inputAddHanlder('%')">%</button>
+                <button onclick="clear()">CE</button>
+                <button>C</button>
+                <button>&times;</button>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button onclick="inputAddHanlder('/')">/</button>
+                <button onclick="inputAddHanlder('7')">7</button>
+                <button onclick="inputAddHanlder('8')">8</button>
+                <button onclick="inputAddHanlder('9')">9</button>
+                <button onclick="inputAddHanlder('')"></button>
+
+                <button onclick="inputAddHanlder('4')">4</button>
+                <button onclick="inputAddHanlder('5')">5</button>
+                <button onclick="inputAddHanlder('6')">6</button>
+                <button onclick="inputAddHanlder('-')">-</button>
+
+                <button onclick="inputAddHanlder('1')">1</button>
+                <button onclick="inputAddHanlder('2')">2</button>
+                <button onclick="inputAddHanlder('3')">3</button>
+                <button onclick="inputAddHanlder('+')">+</button>
+
+                <button></button>
+                <button onclick="inputAddHanlder('0')">0</button>
+                <button onclick="inputAddHanlder('.')">.</button>
+                <button onclick="calculate()">=</button>
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        var input = document.getElementById('input');
+        function inputAddHanlder(val){
+            input.value +=val
+        }
+
+        function calculate(){
+            input.value = eval(input.value)
+        }
+        function clear(){
+            input.value = "";
+        }
+    </script>
+</body>
+</html>
