@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <header class="p-3 border-bottom border-secondary">
+            <a href="/home.html" class=" btn btn-dark"><i class="fa-solid fa-arrow-left"></i></a>
+           
+        </header>
+        <div class="row  p-2 p-md-5 bg-light" style="min-height: 100vh;">
+            <div class="col-md-8 mb-3">
+                <div class="bg-white p-3">
+                    <div class="d-flex justify-content-between align-items-center pb-2 border-bottom border-secondary">
+                        <h1 class="fs-4">Create new sticky notes</h1>
+                    <button class="btn btn-dark btn-sm" onclick="PreviewHandler()">Preview</button>
+                    </div>
+                    <br>
+                    <form action="" onsubmit="saveHandler(event)">
+                        <div class="colors">
+                            <button class="btn" type="button" onclick="selectColor(this,'#B7B1F2')"></button>
+                            <button class="btn" type="button" onclick="selectColor(this,'#FFAB5B')"></button>
+                            <button class="btn" type="button" onclick="selectColor(this,'#B3D8A8')"></button>
+                            <button class="btn" type="button" onclick="selectColor(this,'#A27B5C')"></button>
+                            <button class="btn" type="button" onclick="selectColor(this,'#73C7C7')"></button>
+                            <button class="btn" type="button" onclick="selectColor(this,'#E8F9FF')"></button>
+                        </div>
+                        <div class="form-group mt-3">
+                            <label for="fontSize" class="form-label">Font Size</label>
+                            <select id="fontSize" class="form-control">
+                                <option value="1rem">1rem</option>
+                                <option value="1.5rem" selected>1.5rem</option>
+                                <option value="2rem">2rem</option>
+                                <option value="2.5rem">2.5rem</option>
+                            </select>
+                        </div>
+                        
+                        
+                        <br>
+                        <div class="form-group mt-2">
+                            <label for="" class="form-label">Title</label>
+                            <input type="text" class="form-control p-2 fs-6" id="title" placeholder="Enter title here..">
+                        </div>
+    
+                        <div class="form-group mt-3">
+                            <label for="" class="form-label">Notes</label>
+                            <textarea name="" id="notes" class="form-control" placeholder="Enter notes here.." rows="6"></textarea>
+                        </div>
+                        <div class="form-group mt-3 d-flex gap-3">
+                            <button class="btn btn-dark px-2" type="submit">Save</button>
+                            <button class="btn btn-outline-dark px-2" type="reset">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="bg-white p-3">
+                    <header class="border-bottom border-secondary">
+                       <h4 class="fs-4"> preview</h4>
+                    </header>
+                    <br>
+                    <div id="preview">
+                        <div class="card text-center">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd2NAjCcjjk7ac57mKCQvgWVTmP0ysxnzQnQ&s" alt="" class="w-50 d-block m-auto">
+                            <h1 class="fs-5">No Sticky to Preview</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var allNotes = JSON.parse(localStorage.getItem('notes'))|| [];
+        console.log(allNotes);
+        
+        // var selectedColor = "";
+        var newNotes = {
+            color:'',
+            notesTitle:'',
+            mainNotes:'',
+            fontSize: '1.5rem',
+            date:new Date()
+        }
+        let fontSizeSelector = document.getElementById('fontSize');
+        let allcolorButtons = document.querySelectorAll('.btn');
+        console.log(allcolorButtons);
+        
+        // for(let item of allcolorButtons){
+        //     // console.log(item);
+        //     item.addEventListener('click', ()=>{
+        //         item.classList.add('selected')
+        //         console.log(item);
+        //     })
+        // }
+
+        function selectColor(e, color){
+            console.log(e);
+            for(let item of allcolorButtons){
+                item.style.outline = "";
+                item.style.outlineOffset = ""
+            }
+          e.style.outline = '4px solid #0c0c0c';
+          e.style.outlineOffset = '4px'
+
+          newNotes.color = color;
+          console.log(newNotes);
+          
+
+        }
+        let title = document.getElementById('title')
+        let notes = document.getElementById('notes')
+
+        function saveHandler(e){
+            e.preventDefault();
+            newNotes.notesTitle = title.value;
+            newNotes.mainNotes = notes.value;
+            newNotes.fontSize = fontSizeSelector.value;
+            newNotes.date = new Date();
+             console.log(newNotes);
+             allNotes.push(newNotes);
+             console.log(allNotes);
+             
+             localStorage.setItem('notes', JSON.stringify(allNotes));
+             window.location.href = './home.html'
+             
+        }
+
+        var previewDIv = document.getElementById('preview');
+        function PreviewHandler(){
+            newNotes.notesTitle = title.value;
+            newNotes.mainNotes = notes.value;
+            newNotes.fontSize = fontSizeSelector.value;
+            newNotes.date = new Date();
+             console.log(newNotes);
+             previewDIv.innerHTML = `
+                <div class="p-3 shadow-sm" style="background:${newNotes.color}">
+                    <div class="d-flex gap-1 justify-content-between">
+                        <i class="fa-regular fa-note-sticky fs-4"></i>
+                        <p class="mb-0 fs-6"><i class="fa-solid fa-calendar-days"></i> ${new Date(newNotes.date).toLocaleDateString()} | <i class="fa-solid fa-clock"></i> ${new Date(newNotes.date).toLocaleTimeString()}</p>
+                    </div>
+                    
+                    <hr>
+                    <h3 class="fs-4">${newNotes.notesTitle}</h3>
+                    <p clas="fs-6">${newNotes.mainNotes}</p>
+                </div>
+             `
+        }
+    </script>
+
+    
+</body>
+</html>
