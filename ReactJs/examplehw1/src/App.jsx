@@ -1,6 +1,5 @@
 import React from 'react'
 import Example1 from './components/Example1'
-import Example2 from './components/Example2'
 
 function App() {
   return (
@@ -9,8 +8,7 @@ function App() {
         <h1 className="fs-1">This is the main App.jsx component</h1>
       </center>
       <hr />
-      {/* <Example1/> */}
-      <Example2/>
+      <Example1/>
    </section>
   )
 }
