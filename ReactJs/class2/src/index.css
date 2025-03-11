@@ -11,3 +11,68 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+body {
+  background-color: #f8f9fa;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.content h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.content p {
+  color: #666;
+  font-size: 1rem;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 350px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-header img {
+  /* width: 100%; */
+  border-radius: 15px;
+}
+
+.card-body h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #222;
+}
+
+.card-body p {
+  font-size: 1rem;
+  color: #666;
+}
+
