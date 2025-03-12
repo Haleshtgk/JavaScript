@@ -76,3 +76,6 @@ body {
   color: #666;
 }
 
+.card {
+  transition: transform 0.3s, opacity 0.3s;
+}
