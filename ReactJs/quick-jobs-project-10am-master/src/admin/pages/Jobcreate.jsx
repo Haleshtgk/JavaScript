@@ -24,11 +24,43 @@ function Jobcreate() {
     setForm(prev => ({ ...prev, [name]: value }));
   };
 
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log(form); // or send to API/localStorage
+  //   alert("Form submitted!");
+  // };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+    
+  //   const existingJobs = JSON.parse(localStorage.getItem("jobs")) || [];
+  //   const updatedJobs = [...existingJobs, form];
+  //   localStorage.setItem("jobs", JSON.stringify(updatedJobs));
+    
+  //   alert("Form submitted and saved!");
+  // };
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(form); // or send to API/localStorage
-    alert("Form submitted!");
+  
+    // Safely read from localStorage
+    let existingJobs = [];
+  
+    try {
+      const storedJobs = localStorage.getItem("jobs");
+      if (storedJobs) {
+        existingJobs = JSON.parse(storedJobs);
+      }
+    } catch (err) {
+      console.error("Error parsing localStorage data:", err);
+    }
+  
+    // Add new job entry
+    const updatedJobs = [...existingJobs, form];
+    localStorage.setItem("jobs", JSON.stringify(updatedJobs));
+  
+    alert("Form submitted and saved!");
   };
+  
+  
 
   return (
     <div className="container p-4">
